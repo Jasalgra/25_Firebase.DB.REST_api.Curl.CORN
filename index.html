@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    nav a.sidenav-trigger i {
+      height: 64px;
+      line-height: 64px;
+      color: black;
+    }
+
+    .grey-text {
+      color: #000 !important;
+    }
+
+    .logo {
+      overflow: hidden;
+    }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>FBD1</h1>
+  <!-- NAVBAR -->
+  <!-- <form class="reg">
+    <h3>Register</h3>
+    <input name="email" type="text">
+    <input name="password" type="text">
+    <button type="submit">Registration</button>
+  </form> -->
+  <!-- <form class="log">
+    <h3>Login</h3>
+    <input name="email" type="text">
+    <input name="password" type="text">
+    <button type="submit">Login</button>
+  </form> -->
+  <!-- <form class="create">
+    <h3>Create</h3>
+    <input name="name" type="text">
+    <input name="age" type="text">
+    <button type="submit">Create</button>
+  </form> -->
+
+  <!-- 
+////////////////////////////////
+////////////////////////////////
+//////////////////////////////// 
+-->
+
+  <nav class="z-depth-0 grey lighten-4">
+    <div class="nav-wrapper container">
+      <div class="logo">
+        <a href="#!" class="brand-logo">
+          <img src="./img/logo1.png" style="height: 64px" alt="logo1">
+        </a>
+      </div>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="logged-in">
+          <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+        </li>
+        <li class="logged-in">
+          <a href="#" class="grey-text" id="logout">Logout</a>
+        </li>
+        <li class="logged-in">
+          <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Guide</a>
+        </li>
+        <li class="logged-out">
+          <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+        </li>
+        <li class="logged-out">
+          <a href="#modalSignup" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- !!!!!!Change ID to class!!!!!! -->
+  <ul class="sidenav" id="mobile-demo">
+    <li class="logged-in">
+      <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+    </li>
+    <li class="logged-in">
+      <a href="#" class="grey-text" id="logout">Logout</a>
+    </li>
+    <li class="logged-in">
+      <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Guide</a>
+    </li>
+    <li class="logged-out">
+      <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+    </li>
+    <li class="logged-out">
+      <a href="#modalSignup" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+    </li>
+  </ul>
+  <!-- Modal Trigger -->
+  <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+
+  <!--SIGN UP  Modal Structure -->
+  <div id="modal-signup" class="modal">
+    <div class="modal-content">
+      <h4>Sign up</h4>
+      <p>A bunch of text</p>
+      <!-- form -->
+      <form id="signup-form">
+        <div class="input-field">
+          <input type="email" id="signup_email" required>
+          <label for="signup_email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="signup_password" required>
+          <label for="signup-password">Choose password</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+      </form>
+      <!-- END form -->
+    </div>
+  </div>
+  <!-- Modal Trigger -->
+  <!-- <button data-target="modal" class="btn modal-trigger">Modal</button> -->
+  <!--Sign up  Modal Structure -->
+
+
+  <!--LOGIN  Modal Structure -->
+  <div id="modal-login" class="modal">
+    <!-- <div id="modal1" class="modal">  -->
+    <div class="modal-content">
+      <h4>Login</h4>
+      <!-- form -->
+      <form id="login-form">
+        <div class="input-field">
+          <input type="email" id="login_email" required>
+          <label for="login_email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="login_password" required>
+          <label for="login_password">Choose password</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Login</button>
+        <!-- </div> -->
+      </form>
+      <!-- END form -->
+    </div>
+  </div>
+  <!--END LOGIN  Modal Structure -->
+
+  <!--ACCOUNT  Modal Structure -->
+  <div id="modal-account" class="modal">
+    <!-- <div id="modal1" class="modal">  -->
+    <div class="modal-content center-align">
+      <h4>Account details</h4>
+      <div class="account-details"></div>
+    </div>
+  </div>
+  <!--END ACCOUNT  Modal Structure -->
+
+  <!--CREATE GUIDE  Modal Structure -->
+  <div id="modal-create" class="modal create">
+    <!-- <div id="modal1" class="modal">  -->
+    <div class="modal-content">
+      <h4>Create Guide</h4>
+      <!-- form -->
+      <form class="create-form">
+        <div class="input-field">
+          <input type="text" name="title" id="title" required>
+          <label for="title">Guide title</label>
+        </div>
+        <div class="input-field">
+          <textarea id="content" name="content" class="materialize-textarea" required></textarea>
+          <label for="content">Guide content</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Create</button>
+        <!-- </div> -->
+      </form>
+      <!-- END form -->
+    </div>
+  </div>
+  <!--END CREATE GUIDE  Modal Structure -->
+
+
+
+  <!-- GUIDE List Modal Structure -->
+  <div class="container container_create" style="margin-top: 40px;">
+    <ul class="collapsible z-depth-0 guides" style="border: none;" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header grey"><i class="material-icons">filter_drama</i>First</div>
+        <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
+      </li>
+      <!-- <li>
+        <div class="collapsible-header grey"><i class="material-icons">place</i>Second</div>
+        <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header grey"><i class="material-icons">whatshot</i>Third</div>
+        <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
+      </li> -->
+    </ul>
+  </div>
+  <!--END GUIDE List  Modal Structure -->
+  <!-- <script src="js/test.js"></script> -->
+
+
+
+  <!-- <script src="js/restApi.js"></script> -->
+
+
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-firestore.js"></script>
+  <script>
+    // fetch('https://rest-api20.firebaseio.com/').then(r=>console.log(r.json))
+    // Your web app's Firebase configuration
+    // var firebaseConfig = {
+    //     apiKey: "AIzaSyBXc093FIDO22KcenzQOM9NggBZdQAzdSE",
+    //     authDomain: "rest-api-48264.firebaseapp.com",
+    //     databaseURL: "https://rest-api-48264.firebaseio.com",
+    //     projectId: "rest-api-48264",
+    //     storageBucket: "rest-api-48264.appspot.com",
+    //     messagingSenderId: "868334850617",
+    //     appId: "1:868334850617:web:78aa137988ac74419933e8"
+    // };
+    // console.error(88888888888);
+    // var firebaseConfig = {
+    //   apiKey: "AIzaSyByGRzvYTCA9GjHpVTnBy1idGBESB1JmEQ",
+    //   authDomain: "rest-apiwdb.firebaseapp.com",
+    //   databaseURL: "https://rest-apiwdb.firebaseio.com",
+    //   projectId: "rest-apiwdb",
+    //   storageBucket: "rest-apiwdb.appspot.com",
+    //   messagingSenderId: "528249096849",
+    //   appId: "1:528249096849:web:0bbcc6dcd24dde4ed58d30"
+    // };
+
+    var firebaseConfig = {
+      apiKey: "AIzaSyByGRzvYTCA9GjHpVTnBy1idGBESB1JmEQ",
+      authDomain: "rest-apiwdb.firebaseapp.com",
+      databaseURL: "https://rest-apiwdb.firebaseio.com",
+      projectId: "rest-apiwdb",
+      storageBucket: "rest-apiwdb.appspot.com",
+      messagingSenderId: "528249096849",
+      appId: "1:528249096849:web:0bbcc6dcd24dde4ed58d30"
+    };
+    // // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth()
+    // // console.log(auth);
+    // const db = firebase.firestore()
+
+    //update firestore settings
+    // db.settings({ timestampsInSnapshots: true }); /*old version-*/
+    // db.settings({Timestamp: true});
+  </script>
+  <!-- JavaScript at end of body for optimized loading  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/auth2.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
